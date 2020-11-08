@@ -12,11 +12,16 @@ namespace DataBase
         static void Main(string[] args)
         {
 
-            string connect_info = "server=localhost;username=host;database=;pasword=1234;";
+            string connect_info = "server=localhost;username=host;database=people;pasword=1234;";
 
 
 
-            MySqlConnection connection = new MySqlConnection;
+            MySqlConnection connection = new MySqlConnection(connect_info);
+
+            connection.Open();
+
+
+            connection.Close();
 
 
         }
