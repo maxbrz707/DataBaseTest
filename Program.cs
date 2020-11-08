@@ -12,7 +12,7 @@ namespace DataBase
         static void Main(string[] args)
         {
 
-            string connect_info = "server=localhost;username=host;database=people;pasword=1234;";
+            string connect_info = "server=localhost;user=root;database=people;password=1234;";
 
 
 
@@ -20,7 +20,14 @@ namespace DataBase
 
             connection.Open();
 
+            string query = "INSERT INTO `people`.`students` (`id`, `name`, `age`) VALUES ('1', 'Max', '18');";
 
+
+
+            MySqlCommand command = new MySqlCommand(query, connection);
+
+
+           command.ExecuteNonQuery();
             connection.Close();
 
 
