@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,12 @@ namespace DataBase
         static void Main(string[] args)
         {
 
-            Console.WriteLine("work");
+            string connect_info = "server=localhost;username=host;database=;pasword=1234;";
+
+
+
+            MySqlConnection connection = new MySqlConnection;
+
 
         }
     }
